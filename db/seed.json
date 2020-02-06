@@ -1,0 +1,7 @@
+[
+  {
+    "title": "Reverse engineering my router’s firmware with binwalk",
+    "url": " https://embeddedbits.org/reverse-engineering-router-firmware-with-binwalk/",
+    "description": "A few days ago I decided to reverse engineer my router’s firmware image with binwalk."
+  }
+]
