@@ -1,11 +1,13 @@
 const mongoose = require('../db/connection');
 
-const PostSchema = new mongoose.Schema({
-  title: String,
-  url: String,
-  description: String
-  // date: { type: Date, default: Date.now }
-});
+const PostSchema = new mongoose.Schema(
+  {
+    title: String,
+    url: String,
+    description: String
+  },
+  { timestamps: true }
+);
 
 const Post = mongoose.model('Post', PostSchema);
 

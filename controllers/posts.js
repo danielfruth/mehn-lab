@@ -10,4 +10,16 @@ router.get('/', (req, res) => {
     .catch(console.error);
 });
 
+router.get('/submit', (req, res) => {
+  res.render('submit');
+});
+
+router.post('/', (req, res) => {
+  Post.create(req.body)
+    .then(newPost => {
+      res.redirect('/posts');
+    })
+    .catch(console.error);
+});
+
 module.exports = router;

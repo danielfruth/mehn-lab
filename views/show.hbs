@@ -1,7 +1,9 @@
 <h2>Slacker News</h2>
+<nav>
+    <a href="/posts/submit">Submit</a>
+</nav>
 <ul>
     {{#each posts}}
-    <a href="">{{title}}</a>
-
+    <p><a href="{{url}}">{{title}}{{timestamps}}</a></p>
     {{/each}}
 </ul>
