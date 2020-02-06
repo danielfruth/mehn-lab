@@ -18,8 +18,15 @@ router.post('/', (req, res) => {
   Post.create(req.body)
     .then(newPost => {
       res.redirect('/posts');
+      // res.json(newPost);
     })
     .catch(console.error);
+});
+
+router.delete('/:id', (req, res) => {
+  Post.findOneAndDelete({ _id: req.params.id }).then(() => {
+    res.redirect('/posts');
+  });
 });
 
 module.exports = router;

@@ -4,6 +4,10 @@
 </nav>
 <ul>
     {{#each posts}}
-    <p><a href="{{url}}">{{title}}{{timestamps}}</a></p>
+    <p><a href="{{url}}">{{title}}{{createdAt}}</a>
+        <form action="/posts/{{_id}}?_method=delete" method="post">
+            <input type="submit" value="delete">
+        </form>
+    </p>
     {{/each}}
 </ul>
