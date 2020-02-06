@@ -29,4 +29,10 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+router.get('/:id/edit', (req, res) => {
+  Post.findById(req.params.id).then(post => {
+    res.render('edit', post);
+  });
+});
+
 module.exports = router;
